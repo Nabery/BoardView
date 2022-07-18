@@ -20,11 +20,10 @@ export default function Home() {
   }
 
   return (
-  <div>
-
-    <div className="grid grid-cols-6 gap-1 my-5">
+  <div className='bg-blue-300'>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
      {Object.keys(list).length > 0 ? list.data.map(board => { return (<div className = '' key = {board.name}>
-      <h1 className = 'text-red-500'>{board.name}</h1>
+      <h1 className = 'bg-blue-600  col-span-2 p-5'>{board.name}</h1>
       {board.items.map(item => {return (<Card key = {item.title} name = {item.title} feedback = {item.feedback}/>)})}
       </div>)}) : console.log('Waiting for button press')}
     </div>
